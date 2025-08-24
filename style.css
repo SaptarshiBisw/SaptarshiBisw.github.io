@@ -1,0 +1,1227 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #2A2A28;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #FFFFFF;
+  backdrop-filter: blur(25px);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2A2A28; /* Black */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #444444; /* Black */
+  font-size: 14px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid #444444; /* Dark Grey */
+  background-color: #FFFFFF;
+  color: #2A2A28; /* Black text */
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #2A2A28; 
+}
+
+.btn:hover {
+  background-color: #f4f6f8;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+
+/* HERO SECTION */
+.hero {
+  padding: 150px 100px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Profile Image */
+.hero-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Headline */
+.hero-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28; /* Black */
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #444444; /* Dark Grey */
+  text-align: center;
+}
+
+/* Description */
+.hero-desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28; /* Black */
+  text-align: center;
+}
+
+.hero-desc a {
+  color: #2A2A28;
+  text-decoration: underline;
+}
+
+/* Social Buttons */
+.hero-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* per your spec */
+}
+
+/* Circular button */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #444444; /* Dark Grey */
+  border-radius: 50%;
+  background-color: #FFFFFF;  /* default */
+  text-decoration: none;
+}
+
+/* Hover state: only color change (no animation/transform) */
+.social-icon:hover {
+  background-color: #f4f6f8;
+}
+
+/* Focus visibility for accessibility */
+.social-icon:focus-visible {
+  outline: 2px solid #2A2A28; /* Black */
+  outline-offset: 2px;
+}
+
+/* Icon itself (16px SVGs) */
+.social-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.work {
+  padding: 150px 100px;
+  background: #F3F3F2; /* new: section backdrop */
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Head spacing: 10px between title & subtitle, 50px before grid */
+.work-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;          /* h2 -> subtitle */
+  margin-bottom: 50px;/* subtitle -> cards */
+}
+
+.work-head h2 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  color: #2A2A28;
+  margin: 0;
+}
+
+.work-sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 160%;
+  color: #444444;
+  margin: 0;
+}
+
+/* Grid (unchanged layout) */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Card */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Artwork block — add inner padding so shadows never clip on the rounded corners */
+.work-media {
+  width: 100%;
+  aspect-ratio: 590 / 512;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 48px 40px;
+}
+
+/* Backgrounds */
+.bg-blue { background: #D6E4F0; }
+.bg-pink { background: #F4DCD6; }
+
+/* Image sizing — contain, no distortion; hover zoom (subtle) */
+.work-media img{
+  max-width:100%;
+  max-height:100%;
+  width:auto; height:auto;
+  display:block;
+  transition: transform 260ms cubic-bezier(.2,.7,.2,1);
+}
+
+.work-media:hover img{ transform: scale(1.03); }
+.work-card:hover .work-media img{ transform:none; }
+
+/* Text under artwork */
+.work-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;       /* title -> desc */
+  margin-top: 20px;/* artwork -> title */
+}
+
+.work-text h3 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: normal;
+  color: #2A2A28;
+  margin: 0;
+}
+
+.work-text p {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 160%;
+  color: #444444;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .work { padding: 120px 60px; }
+}
+@media (max-width: 768px) {
+  .work { padding: 100px 24px; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-media { aspect-ratio: 16 / 12; padding: 36px 28px; }
+  .work-head h2 { font-size: 38px; }
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: #444444;                /* Dark Grey */
+  padding: 100px 100px;               /* top/bottom 150, sides 100 */
+  color: #FFFFFF;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.contact-sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 160%;
+  margin: 8px auto 20px;              /* 8px gap from heading */
+  max-width: 513px;                   /* per Figma */
+  color: #FFFFFF;
+}
+
+/* Button: 39px height, 10x20 padding, 5px radius, bg #2A2A28; hover #1D2530 */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #2A2A28;               /* Black */
+  color: #FFFFFF;
+  text-decoration: none;
+  border: none;
+}
+
+.contact-btn:hover {
+  background: #161616;               /* hover color */
+}
+
+.contact-btn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* Responsive niceties */
+@media (max-width: 768px) {
+  .contact { padding: 120px 24px; }
+  .contact-title { font-size: 38px; }
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #2A2A28;              /* Black */
+  padding: 50px 100px;              /* T/B 50, sides 100 */
+  color: #FFFFFF;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* Left group: brand + About (30px gap) */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;                         /* Brand → About */
+  flex-wrap: nowrap;
+}
+
+.footer-brand {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-decoration: none;
+  white-space: nowrap;               /* keep on one line */
+  flex-shrink: 0;
+}
+
+.footer-nav .footer-link {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #AFAFAC;                    /* Grey from spec */
+  text-decoration: none;
+}
+.footer-nav .footer-link:hover { color: #FFFFFF; }
+
+/* Right group: social buttons (reuse size) */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;                         /* same as hero */
+}
+
+/* Base social button (same dimensions as hero) */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #444444;         /* Dark Grey border */
+  text-decoration: none;
+}
+
+/* FOOTER-specific overrides */
+.site-footer .social-icon {
+  background-color: #2A2A28;
+  border: 1px solid #444444;
+}
+.site-footer .social-icon:hover {
+  background-color: #444444;         /* light grey on hover */
+}
+
+/* Use masks to tint the icons to #F3F3F2 without editing SVGs */
+.site-footer .social-icon img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}  /* keep as fallback */
+
+.site-footer .social-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  background-color: #F3F3F2;     /* exact icon color */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* map each icon to its svg */
+.site-footer .icon-mail::before {
+  -webkit-mask-image: url("assets/mail.svg");
+  mask-image: url("assets/mail.svg");
+}
+.site-footer .icon-linkedin::before {
+  -webkit-mask-image: url("assets/linkedin.svg");
+  mask-image: url("assets/linkedin.svg");
+}
+.site-footer .icon-twitter::before {
+  -webkit-mask-image: url("assets/twitter.svg");
+  mask-image: url("assets/twitter.svg");
+}
+
+/* ===== ABOUT: Intro ===== */
+.main-nav .nav-link {
+  font: 500 14px/1 'Manrope', system-ui, sans-serif;
+  color: #2A2A28;                 /* default */
+  text-decoration: none;
+}
+.main-nav .nav-link:hover { color: #2A2A28; }
+.main-nav .nav-link.active,
+.main-nav .nav-link[aria-current="page"] {
+  color: #444444;                 /* active state */
+  cursor: default;
+}
+
+/* ==============================
+   Design tokens
+============================== */
+:root {
+  --Black: #2A2A28;
+  --DarkGrey: #444444;
+  --White: #FFFFFF;
+  --SectionBG: #F3F3F2; /* used on Work; not needed here but kept for parity */
+}
+
+/* ==============================
+   Base / reset
+============================== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--Black);
+  background: var(--White);
+  font: 400 16px/1.6 'Manrope', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--DarkGrey);
+  outline-offset: 2px;
+}
+
+/* Global container (1200px + 100px side gutters) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* ==============================
+   HEADER  (same structure as Home)
+============================== */
+
+/* Header bar shell */
+header {
+  background: var(--White);
+  backdrop-filter: blur(25px);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* The outer bar is the NAV itself (same as Home) */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left brand */
+.brand {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;   /* keep on one line */
+  color: var(--Black);
+}
+
+/* Right group */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links in the right group */
+.nav-link {
+  font-size: 14px;
+  color: var(--Black);
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 12px;    /* nice hit-area */
+  border-radius: 5px;
+}
+.nav-link:hover { color: var(--Black); }
+
+/* Active state (About) */
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: var(--DarkGrey);
+  cursor: default;
+}
+
+/* Header button (Resume) */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+  padding: 10px 20px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--DarkGrey);
+  background-color: var(--White);
+  color: var(--Black);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+.btn:hover { background-color: #f4f6f8; }
+
+/* Prevent header’s generic nav rule from affecting footer nav */
+.site-footer nav {
+  width: auto;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+
+/* The about section starts from here */
+
+/* =========================
+   ABOUT — Intro section
+   ========================= */
+:root{
+  --Black:#2A2A28;
+  --Dark-Grey:#444444;
+}
+
+/* Section padding: 150 top/bottom, 100 sides */
+.about-intro{
+  padding:150px 100px;
+  background:#fff;
+}
+
+/* Title */
+.about-heading{
+  color:var(--Black);
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size:55px;
+  font-weight:400;
+  line-height:110%;
+  max-width:700px;   /* as per your Figma read */
+  margin:0 0 50px 0; /* 10px to description comes below via row spacing */
+}
+
+/* Two-column row */
+.about-row{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;          /* spacing between image and copy */
+}
+
+/* Photo */
+.about-photo{
+  margin:0;
+  flex:0 0 auto;
+}
+.about-photo img{
+  display:block;
+  width:590px;       /* from your spec */
+  height:auto;
+  border-radius:10px;/* optional; remove if you don't want rounding */
+}
+
+/* Copy column */
+.about-copy{
+  flex:1 1 0%;
+  align-self:stretch;
+}
+
+/* Subhead */
+.about-subhead{
+  color:var(--Black);
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size:24px;
+  font-weight:500;
+  line-height:140%;
+  margin:0 0 28px 0; /* 28px gap to body text per screenshot */
+}
+
+/* Body text */
+.about-body{
+  color:var(--Dark-Grey);
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size:18px;
+  font-weight:400;
+  line-height:160%;
+  margin:0;
+  max-width:720px;   /* keeps line length comfy; tweak if needed */
+}
+
+/* =========================
+   ABOUT — Inspirations + Ahead
+   ========================= */
+.about-insights{
+  background:#F3F3F2;                 /* section bg */
+  padding:100px 100px;                /* 150 top/btm, 100 sides */
+}
+
+.about-insights .container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.about-block{                         /* each box */
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:20px;                           /* 50px between heading and two-col */
+  margin-bottom:50px;                 /* 50px between the two boxes */
+}
+.about-block:last-child{ margin-bottom:0; }
+
+.about-h2{
+  width:auto;                        /* fixed, per design */
+  font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size:50px;
+  font-weight:500;
+  line-height:normal;
+  color:#2A2A28;                      /* Black */
+}
+
+.about-two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;      /* 2 columns */
+  gap:50px;                           /* space between columns */
+  align-items:start;
+}
+
+.about-two-col p{
+  font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size:18px;
+  font-weight:400;
+  line-height:160%;
+  color:#444444;                      /* Dark Grey */
+}
+
+.social-icon::before {
+  content: none !important;
+  background: none !important;
+}
+
+/* ===== Mobile menu: full-screen sheet with NO backdrop ===== */
+
+
+.mobile-menu{
+  position: fixed;
+  inset: 0;                 
+  z-index: 1200;
+  overflow: hidden;         
+}
+
+
+.mobile-menu[hidden]{ display: none !important; }
+
+
+body.menu-open{ overflow: hidden; }
+
+
+.mobile-menu_sheet{
+  position: absolute;       
+  inset: 0;                 
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin: 0;
+  border-radius: 0;
+  max-width: none;
+  overflow: hidden;         
+}
+
+
+.mobile-menu_bar{
+  box-sizing: border-box;
+  height: 60px;             
+  padding: 0 20px;          
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   
+}
+
+
+.nav-toggle, .nav-close{
+  width: 36px; height: 36px;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+}
+.nav-toggle img, .nav-close img{ width: 20px; height: 20px; display: block; }
+
+
+.mobile-menu_list{
+  flex: 1;                        
+  display: flex;
+  flex-direction: column;
+  align-items: center;             
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  width: 100%;
+  overflow: hidden;                
+}
+
+.mobile-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;         
+  height: 48px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: "Manrope", system-ui, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;                  
+  color: #2A2A28;
+}
+
+.mobile-menu_bar .brand-link{
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.mobile-item:active { background: #f5f5f5; }
+
+.nav-toggle{ display: none; }
+html, body{ overflow-x: hidden; }
+
+/* ===== Mobile breakpoint ===== */
+@media (max-width: 768px){
+  /* Header */
+  header{ height: 60px; }
+  header .container{ padding-left: 20px; padding-right: 20px; }
+
+  .nav-right{ display: flex; align-items: center; gap: 12px; }
+  .nav-right .nav-link,
+  .nav-right .btn{ display: none; }      /* hide desktop links/buttons */
+  .nav-toggle{ display: inline-flex; margin-left: 8px; }  /* show hamburger */
+
+  /* About page adjustments */
+  .about-row{ flex-direction: column; }
+  .about-photo img{ width: 100%; max-width: 590px; height: auto; }
+  .about-intro{ padding: 50px 24px; }
+  .about-h2{ font-size: 38px; }
+  .about-insights{ padding: 100px 24px; }
+
+  /* === HERO (mobile) === */
+.hero{ padding: 72px 24px 96px; }
+
+.hero-container{ gap: 16px; }
+
+.container.hero-container{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hero-img{
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-title{
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28;
+  text-align: center;
+}
+
+.hero-subtitle{
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #444444;
+  text-align: center;
+}
+
+.hero-desc{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28;
+  text-align: center;
+}
+
+.hero-desc a{
+  text-decoration: underline; /* always underlined */
+}
+
+.hero-social{
+  gap: 12px;                 /* same as web */
+}
+
+.social-icon{
+  width: 42px;               /* same as web */
+  height: 42px;
+  border: 1px solid #444444; /* keep your border */
+}
+
+.social-icon img{
+  width: 16px; height: 16px; /* icon size */
+}
+
+/* === WORK (mobile) === */
+
+/* section spacing + kill container’s 100px side padding */
+.work{ padding: 80px 24px; }
+.container.work-container{ padding-left: 0; padding-right: 0; }
+
+/* head */
+.work-head{ margin-bottom: 50px; }                 /* subtitle → first card */
+.work-head h2{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: normal;
+  color: #2A2A28;
+  margin: 0;
+}
+.work-sub{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #444;
+  margin: 0;
+}
+
+/* grid */
+.work-grid{
+  grid-template-columns: 1fr;                      /* 1 column */
+  gap: 24px;                                       /* card → card */
+}
+
+/* card */
+.work-card{ align-items: stretch; text-decoration: none; }
+
+/* artwork panel (colored) */
+.work-media{
+  border-radius: 12px;
+  padding: 24px;                                   /* 24 all sides */
+  aspect-ratio: 16 / 12;                           /* stable, laptop-friendly */
+  display: grid; place-items: center;
+}
+/* image safety */
+.work-media img{ max-width: 100%; height: auto; display: block; }
+
+/* text under artwork */
+.work-text{
+  margin-top: 24px;                                /* artwork → title */
+  gap: 8px;                                        /* title → desc */
+}
+.work-text h3{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: #2A2A28;
+  margin: 0;
+}
+.work-text p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #444;
+  margin: 0;
+}
+
+/* === CONTACT (mobile) === */
+/* section spacing + kill container's 100px side padding */
+.contact{ padding: 64px 24px; }
+.container.contact-container,
+.contact .container{ padding-left: 0; padding-right: 0; }
+
+/* stack + center everything */
+.contact-cta{                       /* wrapper holding title + sub + button */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0px;                        /* subtitle → button = 18px */
+}
+
+/* title */
+.contact-title{
+  color: #FFF;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 6px 0;
+}
+
+/* subtitle */
+.contact-sub{
+  color: #FFF;
+  text-align: center;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0 0 18px 0;
+}
+
+/* button */
+.contact .btn,
+.contact-btn{
+  width: 112px;
+  height: 44px;
+  white-space: nowrap;        /* <-- fix label wrap */
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;         /* as per spec */
+  border-radius: 5px;
+  background: #2A2A28;
+  color: #FFF;
+  border: 0;
+}
+
+/* === FOOTER (mobile) === */
+.site-footer{ padding: 40px 24px; }
+.site-footer .container{ padding-left: 0; padding-right: 0; }
+
+.site-footer .container{
+  display: flex;
+  flex-direction: column;   /* name/link row, then icons row */
+  align-items: center;
+  gap: 20px;                /* space between rows */
+}
+
+/* top row: name + about link */
+.site-footer .footer-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 40px;               /* distance between “Saptarshi Biswas” and “About me” */
+  margin: 0; 
+  text-align: center;   /* space before icons row */
+}
+
+.site-footer .footer-link{ white-space: nowrap; }
+
+.site-footer .footer-name{
+  color: #FFF;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+  margin: 0;
+  text-align: center;
+}
+
+.site-footer .footer-link{
+  color: #AFAFAC;
+  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  text-decoration: none; 
+  text-align: center;  /* matches your mock */
+}
+
+/* icons row */
+.site-footer .footer-social{
+  display: flex;
+  justify-content: center; /* centered row */
+  align-items: center;
+  gap: 20px;   
+  width: 100%;            /* icon gap = 20px */
+}
+
+.site-footer .social-icon{
+  width: 42px; height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18); /* subtle ring on dark BG */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-footer .social-icon img{
+  width: 16px; height: 16px; display: block;
+}
+
+/* === ABOUT (mobile) === */
+
+/* section spacing + remove the global 100px container padding */
+.about{ padding: 50px 24px; }
+.about .container,
+.container.about-container{ padding-left: 0; padding-right: 0; }
+
+.about > .container,
+.about-intro > .container,
+.container.about-container{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1.about-heading,
+.about .about-heading,
+.about .about-title{
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28;
+  margin: 0 0 24px 0;
+  width: 100%;
+  max-width: 100%;
+  align-self: stretch;
+  white-space: normal;
+}
+
+/* Title: “Who I am beyond design” */
+.about h2,
+.about .about-title{
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #2A2A28;          /* Black */
+  margin: 0 0 24px 0;      /* title → image = 24px */
+}
+
+/* Image */
+.about .about-photo img,
+.about .about-image,
+.about .about-img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;      /* rounded corners (≈13px in your mock) */
+  object-fit: cover;
+  margin: 0 0 24px 0;       /* image → subhead = 24px */
+}
+
+/* Sub-head: “More than a designer…” */
+.about h3,
+.about .about-subhead{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #2A2A28;          /* Black */
+  margin: 0 0 16px 0;      /* subhead → body = 16px */
+}
+
+/* Body copy */
+.about p,
+.about .about-body{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #444;             /* Dark Grey */
+  margin: 0;
+}
+
+ .about-row{
+    flex-direction: column;
+    gap: 24px;           /* image ↕ copy = 24px */
+  }
+
+  /* keep text rhythm per spec */
+  .about-subhead{ margin: 0 0 16px; }  /* subhead → body = 16px */
+
+  /* ensure no extra margins interfere with the gap */
+  .about-photo,
+  .about-photo img{ margin: 0; }
+
+/* Wrapper for the final block */
+  .about-looking,
+  .about-future{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+    gap: 12px;                
+    
+    margin-top: 24px;        
+    margin-bottom: 80px;      
+  }
+
+  
+  .about-looking h3,
+  .about-future h3,
+  
+  .about-looking h2,
+  .about-future h2{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--Black, #2A2A28);
+    margin: 0;               
+  }
+
+  
+  .about-looking p,
+  .about-future p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--Dark-Grey, #444);
+    margin: 0;
+  }
+
+  
+  .about-looking p + p,
+  .about-future p + p{
+    margin-top: 12px;
+  }
+
+  .about-insights { padding: 80px 24px; }
+  .about-insights > .container { padding-left: 0; padding-right: 0; }
+  
+  /* heading */
+  .about-insights .about-h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0 12px; /* title → first paragraph */
+  }
+
+  /* 2-col → single column */
+  .about-insights .about-two-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* paragraph → paragraph */
+  }
+
+  /* paragraphs */
+  .about-insights .about-two-col p {
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--Dark-Grey, #444);
+    margin: 0;
+  }
+}
