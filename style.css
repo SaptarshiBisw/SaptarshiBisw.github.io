@@ -109,7 +109,7 @@ footer {
 
 /* Headline */
 .hero-title {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 55px;
   font-weight: 400;
   line-height: 110%;
@@ -118,7 +118,7 @@ footer {
 }
 
 .hero-subtitle {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 55px;
   font-weight: 400;
   line-height: 110%;
@@ -128,7 +128,7 @@ footer {
 
 /* Description */
 .hero-desc {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 25px;
   font-weight: 400;
   line-height: 110%;
@@ -200,7 +200,7 @@ footer {
 }
 
 .work-head h2 {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 50px;
   font-weight: 400;
   line-height: normal;
@@ -209,7 +209,7 @@ footer {
 }
 
 .work-sub {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 160%;
@@ -270,7 +270,7 @@ footer {
 }
 
 .work-text h3 {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 30px;
   font-weight: 500;
   line-height: normal;
@@ -279,7 +279,7 @@ footer {
 }
 
 .work-text p {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 160%;
@@ -312,7 +312,7 @@ footer {
 }
 
 .contact-title {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 50px;
   font-weight: 400;
   line-height: normal;
@@ -321,7 +321,7 @@ footer {
 }
 
 .contact-sub {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 160%;
@@ -384,7 +384,7 @@ footer {
 }
 
 .footer-brand {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #FFFFFF;
@@ -394,7 +394,7 @@ footer {
 }
 
 .footer-nav .footer-link {
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #AFAFAC;                    /* Grey from spec */
@@ -469,7 +469,7 @@ footer {
 
 /* ===== ABOUT: Intro ===== */
 .main-nav .nav-link {
-  font: 500 14px/1 'Manrope', system-ui, sans-serif;
+  font: 500 14px/1 'Inter', system-ui, sans-serif;
   color: #2A2A28;                 /* default */
   text-decoration: none;
 }
@@ -503,7 +503,7 @@ body {
   margin: 0;
   color: var(--Black);
   background: var(--White);
-  font: 400 16px/1.6 'Manrope', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font: 400 16px/1.6 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1132,7 +1132,7 @@ h1.about-heading,
   font-weight: 500;
   line-height: 140%;
   color: #2A2A28;          /* Black */
-  margin: 0 0 16px 0;      /* subhead → body = 16px */
+  margin: 0 0 12px 0;      /* subhead → body = 16px */
 }
 
 /* Body copy */
