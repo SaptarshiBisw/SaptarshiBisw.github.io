@@ -740,30 +740,43 @@ nav {
 /* ===== Mobile menu: full-screen sheet with NO backdrop ===== */
 
 
-.mobile-menu{
+.mobile-menu {
   position: fixed;
-  inset: 0;                 
+  inset: 0;
   z-index: 1200;
-  overflow: hidden;         
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-ui) var(--ease-out);
 }
 
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-.mobile-menu[hidden]{ display: none !important; }
+.mobile-menu[hidden] { display: none !important; }
 
 
 body.menu-open{ overflow: hidden; }
 
 
-.mobile-menu_sheet{
-  position: absolute;       
-  inset: 0;                 
+.mobile-menu_sheet {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   background: #fff;
   margin: 0;
   border-radius: 0;
   max-width: none;
-  overflow: hidden;         
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: transform var(--duration-ui) var(--ease-out);
+}
+
+.mobile-menu.is-open .mobile-menu_sheet {
+  transform: translateY(0);
 }
 
 

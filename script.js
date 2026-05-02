@@ -17,14 +17,15 @@
     isOpen = true;
 
     lastFocused = document.activeElement;
-    menu.hidden = false;                         // reveal overlay
-    document.body.classList.add('menu-open');   // lock page scroll
+    menu.hidden = false;
+    // Force reflow so the transition runs from the hidden starting state
+    void menu.offsetHeight;
+    menu.classList.add('is-open');
+    document.body.classList.add('menu-open');
     toggle.setAttribute('aria-expanded', 'true');
 
-    // send focus into the dialog (close button first)
     (closeBtn || sheet || menu).focus?.({ preventScroll: true });
 
-    // basic focus trap
     document.addEventListener('keydown', trapTab, true);
   }
 
@@ -34,11 +35,14 @@
 
     document.body.classList.remove('menu-open');
     toggle.setAttribute('aria-expanded', 'false');
-    menu.hidden = true;                          // hide overlay
+    menu.classList.remove('is-open');
 
-    // return focus to the hamburger
+    // Wait for the transition to finish before hiding fully
+    setTimeout(() => {
+      if (!isOpen) menu.hidden = true;
+    }, 300);
+
     (lastFocused || toggle).focus?.({ preventScroll: true });
-
     document.removeEventListener('keydown', trapTab, true);
   }
 
