@@ -63,7 +63,7 @@ nav {
   color: #2A2A28; /* Black text */
   font-size: 14px;
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: border-color var(--duration-hover) var(--ease-out), background-color var(--duration-hover) var(--ease-out);
 }
 
 .nav-link:hover {
@@ -71,7 +71,8 @@ nav {
 }
 
 .btn:hover {
-  background-color: #f4f6f8;
+  background-color: #f4f4f8;
+  border-color: var(--fg-muted);
 }
 
 footer {
@@ -239,23 +240,25 @@ footer {
   display: grid;
   place-items: center;
   padding: 48px 40px;
+  transition: box-shadow var(--duration-ui) var(--ease-out);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 /* Backgrounds */
 .bg-blue { background: #D6E4F0; }
 .bg-pink { background: #F4DCD6; }
 
-/* Image sizing — contain, no distortion; hover zoom (subtle) */
-.work-media img{
-  max-width:100%;
-  max-height:100%;
-  width:auto; height:auto;
-  display:block;
-  transition: transform 260ms cubic-bezier(.2,.7,.2,1);
+.work-card:hover .work-media {
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.15);
 }
 
-.work-media:hover img{ transform: scale(1.03); }
-.work-card:hover .work-media img{ transform:none; }
+.work-media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
 
 /* Text under artwork */
 .work-text {
@@ -557,7 +560,7 @@ nav {
   line-height: 1;
   white-space: nowrap;   /* keep on one line */
   color: var(--Black);
-  transition: color 0.2s ease;
+  transition: color var(--duration-hover) var(--ease-out);
 }
 .brand:hover {
   color: var(--fg-muted);
@@ -578,7 +581,7 @@ nav {
   align-items: center;
   padding: 10px 12px;    /* nice hit-area */
   border-radius: 5px;
-  transition: color 0.2s ease;
+  transition: color var(--duration-hover) var(--ease-out);
 }
 .nav-link:hover { color: var(--fg-muted); }
 
@@ -603,13 +606,8 @@ nav {
   color: var(--Black);
   font-size: 14px;
   text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color var(--duration-hover) var(--ease-out), border-color var(--duration-hover) var(--ease-out);
 }
-.btn:hover {
-  background-color: transparent;
-  border-color: var(--fg-muted);
-}
-
 /* Prevent header’s generic nav rule from affecting footer nav */
 .site-footer nav {
   width: auto;
