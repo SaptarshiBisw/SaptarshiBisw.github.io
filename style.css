@@ -11,11 +11,6 @@ body {
   color: #2A2A28;
 }
 
-/* Container */
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
 
 /* Header */
 header {
@@ -86,17 +81,15 @@ footer {
 
 /* HERO SECTION */
 .hero {
-  padding: 150px 100px;
+  padding: 120px 0 120px;
 }
 
 .hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 /* Profile Image */
@@ -181,8 +174,8 @@ footer {
 }
 
 .work {
-  padding: 150px 100px;
-  background: #F3F3F2; /* new: section backdrop */
+  padding: 120px 0;
+  background: #F3F3F2;
 }
 
 .work-container {
@@ -300,8 +293,8 @@ footer {
 
 /* ===== CONTACT ===== */
 .contact {
-  background: #444444;                /* Dark Grey */
-  padding: 100px 100px;               /* top/bottom 150, sides 100 */
+  background: #444444;
+  padding: 100px 0;
   color: #FFFFFF;
 }
 
@@ -361,8 +354,8 @@ footer {
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: #2A2A28;              /* Black */
-  padding: 50px 100px;              /* T/B 50, sides 100 */
+  background: #2A2A28;
+  padding: 50px 0;
   color: #FFFFFF;
 }
 
@@ -516,12 +509,12 @@ a:focus-visible, button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Global container (1200px + 100px side gutters) */
+/* Global container (960px + 24px side gutters) */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 24px;
 }
 
 /* ==============================
@@ -617,80 +610,77 @@ nav {
 }
 
 /* Section padding: 150 top/bottom, 100 sides */
-.about-intro{
-  padding:150px 100px;
-  background:#fff;
+.about-intro {
+  padding: 120px 0 64px;
+  background: var(--bg);
 }
 
 /* Title */
 .about-heading{
   color:var(--Black);
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size:55px;
   font-weight:400;
   line-height:110%;
-  max-width:700px;   /* as per your Figma read */
+  max-width: 100%;
   margin:0 0 50px 0; /* 10px to description comes below via row spacing */
 }
 
 /* Two-column row */
-.about-row{
-  display:flex;
-  align-items:flex-start;
-  gap:40px;          /* spacing between image and copy */
+.about-row {
+  display: flex;
+  gap: 48px;
+  align-items: stretch;
 }
 
 /* Photo */
-.about-photo{
-  margin:0;
-  flex:0 0 auto;
+.about-photo {
+  flex: 0 0 40%;
+  margin: 0;
 }
-.about-photo img{
-  display:block;
-  width:590px;       /* from your spec */
-  height:auto;
-  border-radius:10px;/* optional; remove if you don't want rounding */
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
 
 /* Copy column */
-.about-copy{
-  flex:1 1 0%;
-  align-self:stretch;
+.about-copy {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* Subhead */
 .about-subhead{
   color:var(--Black);
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size:24px;
   font-weight:500;
   line-height:140%;
-  margin:0 0 28px 0; /* 28px gap to body text per screenshot */
+  margin: 0 0 16px 0;
 }
 
 /* Body text */
 .about-body{
   color:var(--Dark-Grey);
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size:18px;
   font-weight:400;
   line-height:160%;
-  margin:0;
-  max-width:720px;   /* keeps line length comfy; tweak if needed */
+  margin: 0 0 16px 0;
+  max-width: 720px;
 }
 
 /* =========================
    ABOUT — Inspirations + Ahead
    ========================= */
-.about-insights{
-  background:#F3F3F2;                 /* section bg */
-  padding:100px 100px;                /* 150 top/btm, 100 sides */
+.about-insights {
+  background: #F3F3F2;
+  padding: 120px 0 120px;
 }
 
-.about-insights .container{
-  max-width:1200px;
-  margin:0 auto;
-}
 
 .about-block{                         /* each box */
   display:flex;
@@ -703,7 +693,7 @@ nav {
 
 .about-h2{
   width:auto;                        /* fixed, per design */
-  font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size:50px;
   font-weight:500;
   line-height:normal;
@@ -718,7 +708,7 @@ nav {
 }
 
 .about-two-col p{
-  font-family:Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size:18px;
   font-weight:400;
   line-height:160%;
@@ -801,7 +791,7 @@ body.menu-open{ overflow: hidden; }
   text-align: center;
   text-decoration: none;
   border-radius: 6px;
-  font-family: "Manrope", system-ui, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1;                  
@@ -832,8 +822,14 @@ html, body{ overflow-x: hidden; }
   .nav-toggle{ display: inline-flex; margin-left: 8px; }  /* show hamburger */
 
   /* About page adjustments */
-  .about-row{ flex-direction: column; }
-  .about-photo img{ width: 100%; max-width: 590px; height: auto; }
+  .about-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .about-photo {
+    flex: 0 0 auto;
+    width: 100%;
+  }
   .about-intro{ padding: 50px 24px; }
   .about-h2{ font-size: 38px; }
   .about-insights{ padding: 100px 24px; }
@@ -976,7 +972,7 @@ html, body{ overflow-x: hidden; }
 /* title */
 .contact-title{
   color: #FFF;
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 26px;
   font-weight: 500;
   line-height: normal;
@@ -987,7 +983,7 @@ html, body{ overflow-x: hidden; }
 .contact-sub{
   color: #FFF;
   text-align: center;
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 160%;
@@ -1036,7 +1032,7 @@ html, body{ overflow-x: hidden; }
 
 .site-footer .footer-name{
   color: #FFF;
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 160%;
@@ -1046,7 +1042,7 @@ html, body{ overflow-x: hidden; }
 
 .site-footer .footer-link{
   color: #AFAFAC;
-  font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 160%;
