@@ -77,3 +77,15 @@
   const mq = window.matchMedia('(min-width: 769px)');
   mq.addEventListener?.('change', e => { if (e.matches) closeMenu(); });
 })();
+// Page-load entrance trigger
+// Adds .is-ready to <body> once the page is parsed.
+// CSS picks up the class and fades the hero up.
+(() => {
+  const ready = () => document.body.classList.add('is-ready');
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    requestAnimationFrame(ready);
+  } else {
+    document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(ready));
+  }
+})();

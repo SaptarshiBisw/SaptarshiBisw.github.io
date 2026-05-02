@@ -484,6 +484,14 @@ footer {
   --DarkGrey: #444444;
   --White: #FFFFFF;
   --SectionBG: #F3F3F2; /* used on Work; not needed here but kept for parity */
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --duration-hover: 200ms;
+  --duration-ui: 300ms;
+  --duration-reveal: 400ms;
+  --duration-entrance: 600ms;
 }
 
 /* ==============================
@@ -622,7 +630,7 @@ nav {
 
 /* Section padding: 150 top/bottom, 100 sides */
 .about-intro {
-  padding: 120px 0 64px;
+  padding: 120px 0 120px;
   background: var(--bg);
 }
 
@@ -1231,4 +1239,20 @@ h1.about-heading,
     color: var(--Dark-Grey, #444);
     margin: 0;
   }
+}
+/* ===========================================
+   HERO ENTRANCE — single-unit fade-up
+   =========================================== */
+
+.hero-container {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+}
+
+body.is-ready .hero-container {
+  opacity: 1;
+  transform: translateY(0);
 }
