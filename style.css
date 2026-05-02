@@ -84,7 +84,7 @@ footer {
 
 /* HERO SECTION */
 .hero {
-  padding: 120px 0 120px;
+  padding: 140px 0 140px;
 }
 
 .hero-container {
@@ -97,8 +97,8 @@ footer {
 
 /* Profile Image */
 .hero-img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -545,10 +545,14 @@ nav {
 /* Left brand */
 .brand {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;   /* keep on one line */
   color: var(--Black);
+  transition: color 0.2s ease;
+}
+.brand:hover {
+  color: var(--fg-muted);
 }
 
 /* Right group */
@@ -566,8 +570,9 @@ nav {
   align-items: center;
   padding: 10px 12px;    /* nice hit-area */
   border-radius: 5px;
+  transition: color 0.2s ease;
 }
-.nav-link:hover { color: var(--Black); }
+.nav-link:hover { color: var(--fg-muted); }
 
 /* Active state (About) */
 .nav-link.active,
@@ -590,9 +595,12 @@ nav {
   color: var(--Black);
   font-size: 14px;
   text-decoration: none;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-.btn:hover { background-color: #f4f6f8; }
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--fg-muted);
+}
 
 /* Prevent header’s generic nav rule from affecting footer nav */
 .site-footer nav {
