@@ -93,3 +93,44 @@
     document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(ready));
   }
 })();
+
+// Page transition — fade body to opacity 0, then navigate.
+// Falls through to default browser behavior if anything fails.
+(() => {
+  // Bail if reduced-motion is on — let browser navigate normally
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Find the specific internal nav links we want to animate
+  const links = document.querySelectorAll(
+    'a.brand[href$="index.html"], a.nav-link[href$="about.html"], a.footer-brand[href$="index.html"], a.footer-link[href$="about.html"], a.mobile-item[href$="about.html"]'
+  );
+
+  if (!links.length) return;
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Skip if user is doing cmd-click / ctrl-click / middle-click (open in new tab)
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+
+      // Skip if the link points to the current page (no navigation needed)
+      const targetPath = new URL(link.href).pathname;
+      const currentPath = window.location.pathname;
+      if (targetPath === currentPath) return;
+
+      // Skip if link opens in a new tab
+      if (link.target === '_blank') return;
+
+      // Prevent immediate navigation, run fade, then navigate
+      e.preventDefault();
+      const href = link.href;
+
+      document.body.classList.add('is-leaving');
+
+      // Wait for fade-out to complete, then go
+      // 200ms = duration-hover (same as fade)
+      setTimeout(() => {
+        window.location.href = href;
+      }, 120);
+    });
+  });
+})();

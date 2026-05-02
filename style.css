@@ -1290,3 +1290,23 @@ body.is-ready .hero-container {
     transition: none !important;
   }
 }
+
+/* ===========================================
+   PAGE TRANSITION — fade out on navigation
+   =========================================== */
+
+body {
+  transition: opacity var(--duration-hover) var(--ease-out);
+}
+
+body.is-leaving {
+  opacity: 0;
+}
+
+/* Reduced-motion: skip the fade entirely */
+@media (prefers-reduced-motion: reduce) {
+  body.is-leaving {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
