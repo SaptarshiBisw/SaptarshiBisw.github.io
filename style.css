@@ -1267,3 +1267,26 @@ body.is-ready .hero-container {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===========================================
+   REDUCED MOTION
+   Respect user OS preference
+   =========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hero entrance — show immediately, no fade */
+  .hero-container {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
