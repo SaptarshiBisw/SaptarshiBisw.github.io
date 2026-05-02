@@ -103,18 +103,18 @@ footer {
 /* Headline */
 .hero-title {
   font-family: 'Inter', sans-serif;
-  font-size: 55px;
-  font-weight: 400;
-  line-height: 110%;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.15;
   color: #2A2A28; /* Black */
   text-align: center;
 }
 
 .hero-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 55px;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 1.35;
   color: #444444; /* Dark Grey */
   text-align: center;
 }
@@ -122,9 +122,9 @@ footer {
 /* Description */
 .hero-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 25px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 1.6;
   color: #2A2A28; /* Black */
   text-align: center;
 }
@@ -194,9 +194,9 @@ footer {
 
 .work-head h2 {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
   color: #2A2A28;
   margin: 0;
 }
@@ -204,8 +204,8 @@ footer {
 .work-sub {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 18px;
-  font-weight: 300;
-  line-height: 160%;
+  font-weight: 400;
+  line-height: 1.6;
   color: #444444;
   margin: 0;
 }
@@ -264,18 +264,18 @@ footer {
 
 .work-text h3 {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 1.3;
   color: #2A2A28;
   margin: 0;
 }
 
 .work-text p {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 160%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
   color: #444444;
   margin: 0;
 }
@@ -288,7 +288,7 @@ footer {
   .work { padding: 100px 24px; }
   .work-grid { grid-template-columns: 1fr; }
   .work-media { aspect-ratio: 16 / 12; padding: 36px 28px; }
-  .work-head h2 { font-size: 38px; }
+  .work-head h2 { font-size: 28px; }
 }
 
 /* ===== CONTACT ===== */
@@ -306,18 +306,18 @@ footer {
 
 .contact-title {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
   margin: 0;
   color: #FFFFFF;
 }
 
 .contact-sub {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 160%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
   margin: 8px auto 20px;              /* 8px gap from heading */
   max-width: 513px;                   /* per Figma */
   color: #FFFFFF;
@@ -349,7 +349,7 @@ footer {
 /* Responsive niceties */
 @media (max-width: 768px) {
   .contact { padding: 120px 24px; }
-  .contact-title { font-size: 38px; }
+  .contact-title { font-size: 28px; }
 }
 
 /* ===== FOOTER ===== */
@@ -619,9 +619,9 @@ nav {
 .about-heading{
   color:var(--Black);
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size:55px;
-  font-weight:400;
-  line-height:110%;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.15;
   max-width: 100%;
   margin:0 0 50px 0; /* 10px to description comes below via row spacing */
 }
@@ -656,9 +656,9 @@ nav {
 .about-subhead{
   color:var(--Black);
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size:24px;
-  font-weight:500;
-  line-height:140%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
   margin: 0 0 16px 0;
 }
 
@@ -666,9 +666,9 @@ nav {
 .about-body{
   color:var(--Dark-Grey);
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size:18px;
-  font-weight:400;
-  line-height:160%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
   margin: 0 0 16px 0;
   max-width: 720px;
 }
@@ -694,9 +694,9 @@ nav {
 .about-h2{
   width:auto;                        /* fixed, per design */
   font-family: 'Inter', system-ui, sans-serif;
-  font-size:50px;
-  font-weight:500;
-  line-height:normal;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
   color:#2A2A28;                      /* Black */
 }
 
@@ -709,9 +709,9 @@ nav {
 
 .about-two-col p{
   font-family: 'Inter', system-ui, sans-serif;
-  font-size:18px;
-  font-weight:400;
-  line-height:160%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
   color:#444444;                      /* Dark Grey */
 }
 
@@ -831,7 +831,7 @@ html, body{ overflow-x: hidden; }
     width: 100%;
   }
   .about-intro{ padding: 50px 24px; }
-  .about-h2{ font-size: 38px; }
+  .about-h2{ font-size: 28px; }
   .about-insights{ padding: 100px 24px; }
 
   /* === HERO (mobile) === */
@@ -851,7 +851,7 @@ html, body{ overflow-x: hidden; }
 }
 
 .hero-title{
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 400;
   line-height: 110%;
   color: #2A2A28;
@@ -859,7 +859,7 @@ html, body{ overflow-x: hidden; }
 }
 
 .hero-subtitle{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 110%;
   color: #444444;
@@ -867,7 +867,7 @@ html, body{ overflow-x: hidden; }
 }
 
 .hero-desc{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 110%;
   color: #2A2A28;
@@ -940,7 +940,7 @@ html, body{ overflow-x: hidden; }
   gap: 8px;                                        /* title → desc */
 }
 .work-text h3{
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   line-height: normal;
   color: #2A2A28;
@@ -973,7 +973,7 @@ html, body{ overflow-x: hidden; }
 .contact-title{
   color: #FFF;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   line-height: normal;
   margin: 0 0 6px 0;
@@ -1088,7 +1088,7 @@ html, body{ overflow-x: hidden; }
 h1.about-heading,
 .about .about-heading,
 .about .about-title{
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 400;
   line-height: 110%;
   color: #2A2A28;
