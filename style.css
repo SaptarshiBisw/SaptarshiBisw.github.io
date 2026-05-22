@@ -1346,16 +1346,23 @@ body.is-leaving {
   }
 
   .case-card-media {
-    flex: 0 0 auto;
+    flex: 0 0 320px;
     width: 100%;
     height: 320px;
     aspect-ratio: auto;
+    overflow: hidden;
   }
 
   .case-card-body {
-    flex: 1 1 auto;
+    flex: 0 0 320px;
     padding: 24px 28px 28px;
     min-height: 320px;
+  }
+
+  .case-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .case-illustration-web {
@@ -1368,5 +1375,43 @@ body.is-leaving {
 
   .case-title {
     font-size: 22px;
+  }
+}
+
+/* ===========================================
+   FOCUS — show ring only for keyboard navigation
+   =========================================== */
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.nav-close:focus,
+.nav-toggle:focus {
+  outline: none;
+}
+
+.nav-close:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+/* ===========================================
+   HERO — mobile line break
+   =========================================== */
+
+.hero-mobile-break {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-mobile-break {
+    display: inline;
   }
 }
